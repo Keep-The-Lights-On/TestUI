@@ -1,0 +1,9 @@
+{
+  "name": "Trikal AI",
+  "description": "Institutional-grade market intelligence powered by proprietary machine learning models.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "readChatHistory",
+    "writeChatHistory"
+  ]
+}
