@@ -2,6 +2,7 @@ import { motion } from "motion/react";
 import { Brain, Zap, ShieldCheck } from "lucide-react";
 import { Feature } from "../types";
 import { cn } from "../lib/utils";
+import { DiaTextReveal } from "../registry/magicui/dia-text-reveal";
 
 const FEATURES: Feature[] = [
   {
@@ -35,7 +36,7 @@ export function Features() {
             viewport={{ once: true }}
             className="font-display text-4xl md:text-5xl font-bold mb-6"
           >
-            Institutional-Grade Intelligence
+            <DiaTextReveal text="Institutional-Grade Intelligence" colors={["#A97CF8", "#F38CB8", "#FDCC92"]} textColor="#0f172a" />
           </motion.h2>
           <motion.div 
             initial={{ width: 0 }}
