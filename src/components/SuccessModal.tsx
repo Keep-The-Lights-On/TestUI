@@ -1,13 +1,48 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { CheckCircle } from "lucide-react";
 import { ModalProps } from "../types";
+import confetti from "canvas-confetti";
 
 /**
  * Success Modal
  * Displays a confirmation message after successful waitlist submission.
  */
 export function SuccessModal({ isOpen, onClose }: ModalProps) {
+  useEffect(() => {
+    if (isOpen) {
+      const end = Date.now() + 3 * 1000; // 3 seconds
+      const colors = ["#2dd4bf", "#a855f7", "#d2d9f4", "#ffffff"];
+
+      const frame = () => {
+        if (Date.now() > end) return;
+
+        confetti({
+          particleCount: 2,
+          angle: 60,
+          spread: 55,
+          startVelocity: 60,
+          origin: { x: 0, y: 0.5 },
+          colors: colors,
+          zIndex: 120,
+        });
+        confetti({
+          particleCount: 2,
+          angle: 120,
+          spread: 55,
+          startVelocity: 60,
+          origin: { x: 1, y: 0.5 },
+          colors: colors,
+          zIndex: 120,
+        });
+
+        requestAnimationFrame(frame);
+      };
+
+      frame();
+    }
+  }, [isOpen]);
+
   return (
     <AnimatePresence>
       {isOpen && (
