@@ -3,6 +3,7 @@ import { Brain, Zap, ShieldCheck } from "lucide-react";
 import { Feature } from "../types";
 import { cn } from "../lib/utils";
 import { DiaTextReveal } from "../registry/magicui/dia-text-reveal";
+import ShaderBackground from "./ui/shader-background";
 
 const FEATURES: Feature[] = [
   {
@@ -27,7 +28,10 @@ const FEATURES: Feature[] = [
 
 export function Features() {
   return (
-    <section className="py-32 px-4 relative">
+    <section className="py-32 px-4 relative overflow-hidden">
+      <div className="absolute inset-0 -z-10">
+        <ShaderBackground />
+      </div>
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-20">
           <motion.h2 
