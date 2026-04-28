@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import { Rocket } from "lucide-react";
 import { validateEmail, cn } from "../lib/utils";
 import { SubmissionFlowProps } from "../types";
+import { ShaderAnimation } from "@/components/ui/shader-animation";
 
 /**
  * Hero Section
@@ -26,9 +27,7 @@ export function Hero({ onSuccess }: SubmissionFlowProps) {
   return (
     <section className="relative min-h-[70vh] flex flex-col items-center justify-center px-4 py-20 overflow-hidden">
       {/* Dynamic Background */}
-      <div className="absolute inset-0 grid-bg -z-10" />
-      <div className="absolute top-1/4 left-1/4 w-[40rem] h-[40rem] bg-primary/10 rounded-full blur-[120px] -z-10 animate-pulse" />
-      <div className="absolute bottom-1/4 right-1/4 w-[30rem] h-[30rem] bg-secondary/10 rounded-full blur-[100px] -z-10 animate-pulse delay-700" />
+      <ShaderAnimation />
 
       {/* Dynamic Badge */}
       <motion.div
