@@ -1,5 +1,5 @@
 export function Footer() {
-  const logoUrl = "https://lh3.googleusercontent.com/aida/ADBb0uiuUeYHL3h9kCvty1TZSZvqFF90r-9yRtOESffGe-pM0JU7mmJPFpYsRSYzxzgaoDnCtDGGbloLExOa1sSneO_RBktmwNxL9fu7wF3TI5Xp8EEmAoS5etKuFELkt3SJe2ZYWh0E2ydpeIKXfA4mgMghttb-gMa96puXKxXK-3ysfg78bTYRD1yFDXc5ub-NwZfMVhHIBbnyu1nckbXAsbkiooi-WCOHE9J-YMQQaLflnZd4i0WijB5V3tzXPN29KoHgUBETMKuIMiU";
+  const logoUrl = "/trikal_logo.png";
 
   return (
     <footer className="relative py-16 px-4 overflow-hidden border-t border-slate-100">
@@ -8,7 +8,7 @@ export function Footer() {
       
       <div className="max-w-7xl mx-auto flex flex-col items-center justify-center gap-8 text-center relative z-10">
         <div className="flex items-center">
-           <img src={logoUrl} alt="Trikal Logo" className="h-8 md:h-10 w-auto object-contain" referrerPolicy="no-referrer" />
+           <img src={logoUrl} alt="Trikal Logo" className="h-14 md:h-16 w-auto object-contain" referrerPolicy="no-referrer" />
         </div>
 
         <div className="space-y-2">
