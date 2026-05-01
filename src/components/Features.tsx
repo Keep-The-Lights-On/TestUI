@@ -3,6 +3,7 @@ import { Brain, Zap, ShieldCheck } from "lucide-react";
 import { Feature } from "../types";
 import { cn } from "../lib/utils";
 import { DiaTextReveal } from "../registry/magicui/dia-text-reveal";
+import { HeroSection } from "./ui/feature-carousel";
 
 const FEATURES: Feature[] = [
   {
@@ -25,10 +26,47 @@ const FEATURES: Feature[] = [
   }
 ];
 
+const CAROUSEL_IMAGES = [
+  {
+    src: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&auto=format&fit=crop&q=60',
+    alt: 'Financial chart and graph',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=900&auto=format&fit=crop&q=60',
+    alt: 'Stock market trading screen',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&auto=format&fit=crop&q=60',
+    alt: 'Data analytics dashboard',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1621416894569-0f39ed31d247?w=900&auto=format&fit=crop&q=60',
+    alt: 'Crypto trading platform',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=900&auto=format&fit=crop&q=60',
+    alt: 'Stock exchange data',
+  },
+];
+
 export function Features() {
   return (
     <section className="py-32 px-4 relative">
       <div className="max-w-7xl mx-auto">
+        {/* Feature Carousel Integration */}
+        <div className="mb-32 w-full rounded-[2.5rem] overflow-hidden shadow-2xl">
+          <HeroSection
+            title={
+              <>
+                Advanced <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Trading Suite</span>
+              </>
+            }
+            subtitle="Access our cutting-edge analytics and trading tools seamlessly across all platforms."
+            images={CAROUSEL_IMAGES}
+            className="min-h-[800px] rounded-[2.5rem]"
+          />
+        </div>
+
         <div className="text-center mb-20">
           <motion.h2 
             initial={{ opacity: 0 }}
